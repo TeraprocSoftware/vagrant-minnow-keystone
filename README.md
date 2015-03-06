@@ -23,13 +23,16 @@ Vagrant project to spin up an integration environment for minnow. A node named "
 SSH host "minnow-1" using account "vagrant/vagrant".
 
 ```
-keystone-all --config-file /usr/local/keystone/etc/keystone.conf
+sudo su
+cd /usr/local/keystone/
+keystone-all --config-file /usr/local/keystone/etc/keystone.conf &
 keystone-manage db_sync
 ```
 
 ### Add "admin" role
 
 ```
+cd /usr/local/keystone/
 keystone --os-token=ADMIN --os-endpoint=http://localhost:35357/v2.0 role-create --name=admin
 ```
 
