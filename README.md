@@ -20,6 +20,7 @@ Vagrant project to spin up an integration environment for minnow. A node named "
 
 ```
 keystone-all --config-file /usr/local/keystone/etc/keystone.conf
+keystone-manage db_sync
 ```
 
 ### Add "admin" role
