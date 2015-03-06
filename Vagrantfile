@@ -21,6 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 			node.vm.provision "shell", path: "scripts/setup-ubuntu.sh"
 			node.vm.provision "shell", path: "scripts/setup-ubuntu-ntp.sh"
 			node.vm.provision "shell", path: "scripts/setup-java.sh"
+			node.vm.provision "shell", path: "scripts/setup-postgres.sh"
 			node.vm.provision "shell", path: "scripts/setup-keystone.sh"
 		end
 	end

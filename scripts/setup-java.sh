@@ -9,8 +9,7 @@ function installLocalJava {
 
 function installRemoteJava {
 	echo "install open jdk"
-	apt-get install -y java-1.7.0-openjdk.x86_64
-    apt-get install -y java-1.7.0-openjdk-devel.x86_64
+	apt-get install -y openjdk-7-jdk
 }
 
 function setupJava {
@@ -84,9 +83,9 @@ function setupMavenEnvVars {
 
 echo "setup java"
 installJava
-setupJava
-setupEnvVars
-installAnt
-setupAntEnvVars
-installMaven
-setupMavenEnvVars
+#setupJava
+#setupEnvVars
+#installAnt
+#setupAntEnvVars
+#installMaven
+#setupMavenEnvVars

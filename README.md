@@ -5,8 +5,10 @@ minnow-keystone
 
 Vagrant project to spin up an integration environment for minnow. A node named "minnow-1" is provisioned with keystone installed.
 
-1. OS: Ubuntu 14.04 
-2. Keystone: latest release (branch: stable/juno)
+1. OS: Ubuntu 14.04
+2. JDK7
+3. Progress+pgadmin3
+4. Keystone: latest release (branch: stable/juno)
 
 # Getting Started
 
