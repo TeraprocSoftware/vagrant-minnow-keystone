@@ -16,8 +16,6 @@ Vagrant project to spin up an integration environment for minnow. A node named "
 4. Git clone this project, and change directory (cd) into this project (directory).
 5. Run ```vagrant up``` to create the VM.
 
-# Getting started
-
 ### Start up keystone
 
 ```
@@ -29,8 +27,6 @@ keystone-all --config-file /usr/local/keystone/etc/keystone.conf
 ```
 keystone --os-token=ADMIN --os-endpoint=http://localhost:35357/v2.0 role-create --name=admin
 ```
-
-### Keystone configuration refer to http://docs.openstack.org/developer/keystone/configuration.html
 
 #Integration cases:
 
