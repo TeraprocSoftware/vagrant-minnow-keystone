@@ -16,14 +16,6 @@ function setupKeystone {
 	cp /usr/local/keystone/etc/keystone.conf.sample /usr/local/keystone/etc/keystone.conf
 }
 
-function startKeystone {
-    echo "configure keystone"
-	# start keystone
-	keystone-all --config-file /usr/local/keystone/etc/keystone.conf &
-	# add "admin" role
-	keystone --os-token=ADMIN --os-endpoint=http://localhost:35357/v2.0 role-create --name=admin
-}
 
 echo "setup keystone"
 setupKeystone
-startKeystone

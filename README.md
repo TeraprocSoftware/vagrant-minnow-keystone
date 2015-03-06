@@ -1,4 +1,4 @@
-minnow-integration
+minnow-keystone
 ================================
 
 # Introduction
@@ -16,14 +16,25 @@ Vagrant project to spin up an integration environment for minnow. A node named "
 4. Git clone this project, and change directory (cd) into this project (directory).
 5. Run ```vagrant up``` to create the VM.
 
-# Keystone integration
-Keystone is started after installation.
+# Getting started
 
-Keystone root directory is "/usr/local/keystone".
-Keystone configuration refer to http://docs.openstack.org/developer/keystone/configuration.html
-Keystone API specification refer to http://developer.openstack.org/api-ref-identity-v2.html
+1. Start up keystone
+
+```
+keystone-all --config-file /usr/local/keystone/etc/keystone.conf
+```
+
+2. Add "admin" role
+
+```
+keystone --os-token=ADMIN --os-endpoint=http://localhost:35357/v2.0 role-create --name=admin
+```
+
+3. Keystone configuration refer to http://docs.openstack.org/developer/keystone/configuration.html
 
 ##Integration cases:
+
+Keystone API specification refer to http://developer.openstack.org/api-ref-identity-v2.html
 
 ### Create user
 
