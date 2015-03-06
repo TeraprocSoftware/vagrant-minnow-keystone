@@ -18,21 +18,21 @@ Vagrant project to spin up an integration environment for minnow. A node named "
 
 # Getting started
 
-1. Start up keystone
+### Start up keystone
 
 ```
 keystone-all --config-file /usr/local/keystone/etc/keystone.conf
 ```
 
-2. Add "admin" role
+### Add "admin" role
 
 ```
 keystone --os-token=ADMIN --os-endpoint=http://localhost:35357/v2.0 role-create --name=admin
 ```
 
-3. Keystone configuration refer to http://docs.openstack.org/developer/keystone/configuration.html
+### Keystone configuration refer to http://docs.openstack.org/developer/keystone/configuration.html
 
-##Integration cases:
+#Integration cases:
 
 Keystone API specification refer to http://developer.openstack.org/api-ref-identity-v2.html
 
