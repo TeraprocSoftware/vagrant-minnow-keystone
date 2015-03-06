@@ -5,7 +5,7 @@ minnow-keystone
 
 Vagrant project to spin up an integration environment for minnow. A node named "minnow-1" is provisioned with keystone installed.
 
-1. OS: Ubuntu 14.04
+1. OS: Ubuntu 14.04 
 2. Keystone: latest release (branch: stable/juno)
 
 # Getting Started
@@ -17,6 +17,8 @@ Vagrant project to spin up an integration environment for minnow. A node named "
 5. Run ```vagrant up``` to create the VM.
 
 ### Start up keystone
+
+SSH host "minnow-1" using account "vagrant/vagrant".
 
 ```
 keystone-all --config-file /usr/local/keystone/etc/keystone.conf
