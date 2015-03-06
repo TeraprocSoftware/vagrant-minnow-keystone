@@ -59,7 +59,7 @@ http://localhost:35357/v2.0/users
 ###  User log on
 
 ```
-curl -i -H "Content-Type: application/json" -d '
+curl -H "Content-Type: application/json" -d '
 {
     "auth": {
         "passwordCredentials": {
@@ -105,7 +105,7 @@ curl -s -H "Content-Type: application/json" -H "X-Auth-Token: ADMIN" -d '
 ### List roles
 
 ```
-curl -i -H "X-Auth-Token: ADMIN" http://localhost:35357/v2.0/OS-KSADM/roles
+curl -H "X-Auth-Token: ADMIN" http://localhost:35357/v2.0/OS-KSADM/roles
 ```
 
 ### Assign role to user on tenant
@@ -117,7 +117,7 @@ curl -s -X PUT -H "X-Auth-Token: ADMIN" http://localhost:35357/v2.0/tenants/${te
 ### Logon with tenant
 
 ```
-curl -i -H "Content-Type: application/json" -d '
+curl -H "Content-Type: application/json" -d '
 {
     "auth": {
 	"tenantName": "OL-R-Cluster",
@@ -132,7 +132,7 @@ curl -i -H "Content-Type: application/json" -d '
 ### Validate token
 
 ```
-curl -i -H "X-Auth-Token: ADMIN" http://localhost:35357/v2.0/tokens/${token_id}
+curl -H "X-Auth-Token: ADMIN" http://localhost:35357/v2.0/tokens/${token_id}
 ```
 
 
