@@ -6,5 +6,10 @@ function setupPostgres {
 	apt-get install -y pgadmin3
 }
 
-echo "setup postgress"
+function setupLdap {
+	apt-get install -y slapd
+}
+
+echo "setup postgress and ldap"
 setupPostgres
+setupLdap
