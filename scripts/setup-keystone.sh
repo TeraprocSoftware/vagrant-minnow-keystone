@@ -11,11 +11,11 @@ function setupKeystone {
 
 	git clone -b $KEYSTONE_BRANCH $KEYSTONE_GITHUB
 	mv /home/vagrant/keystone /usr/local
+	cp -f /vagrant/keystone/core.py /usr/local/keystone/keystone/identity
 	cd /usr/local/keystone
 	python setup.py install
 	cp /usr/local/keystone/etc/keystone.conf.sample /usr/local/keystone/etc/keystone.conf
 }
-
 
 echo "setup keystone"
 setupKeystone

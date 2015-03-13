@@ -17,6 +17,8 @@ Vagrant project to spin up an integration environment for minnow. A node named "
 3. Run ```vagrant box add ubuntu14 https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vbox.box```
 4. Git clone this project, and change directory (cd) into this project (directory).
 5. Run ```vagrant up``` to create the VM.
+6. Follows the instructions to setup Send-Only SMTP email server
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-14-04
 
 ### Start up keystone
 
@@ -135,4 +137,21 @@ curl -H "Content-Type: application/json" -d '
 curl -H "X-Auth-Token: ADMIN" http://localhost:35357/v2.0/tokens/${token_id}
 ```
 
+### Query a specific user
+
+```
+curl -H "X-Auth-Token: ADMIN" http://localhost:35357/v2.0/users/${user_id}
+```
+
+### Reset user password and send an email to user
+
+Note: need get a new token after changing password
+
+```
+ curl -s -X PATCH \
+ -H "X-Auth-Token: ADMIN" \
+ -H "Content-Type: application/json" \
+ -d '{ "user": {"password": "${new_generated_password}"} }' \
+ http://localhost:5000/v3/users/${user_id}
+```
 
